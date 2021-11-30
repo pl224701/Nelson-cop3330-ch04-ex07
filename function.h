@@ -9,17 +9,9 @@
 #include <vector>
 using namespace std;
 
-int function()
+
+int output(string operation, string number1, string number2)
 {
-    std::string number1;
-    std::string number2;
-    std::string operation;
-    cout << "Enter the operation: ";
-    getline(cin,operation);
-    cout << "Enter the first single digit number: ";
-    getline(cin,number1);
-    cout << "Enter the second single digit number: ";
-    getline(cin,number2);
     vector<string> inputs1{"zero","one","two","three","four","five","six","seven","eight","nine"};
     vector<string> inputs2{"0","1","2","3","4","5","6","7","8","9"};
     double n1;
@@ -181,5 +173,21 @@ int function()
         }
     }
     cout << "One of the inputs is invalid";
+    return 0;
+}
+
+int function()
+{
+    std::string number1;
+    std::string number2;
+    std::string operation;
+    cout << "Enter the operation: ";
+    getline(cin,operation);
+    cout << "Enter the first single digit number: ";
+    getline(cin,number1);
+    cout << "Enter the second single digit number: ";
+    getline(cin,number2);
+    output(operation,number1,number2);
+    
     return 0;
 }
